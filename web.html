@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Jaipur - The Pink City</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #ffecd2, #fcb69f);
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            color: #d35400;
+            font-size: 2.5em;
+        }
+
+        .gallery {
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery h2 {
+            color: #8e44ad;
+        }
+        .gallery .images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery .images img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .gallery .images img:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            background: rgba(255, 255, 255, 0.8);
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            list-style: square;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        li {
+            font-size: 18px;
+        }
+
+        .video {
+            text-align: center;
+            padding: 20px;
+        }
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 560px;
+            height: 315px;
+        }
+
+        .link {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .link a {
+            color: #2980b9;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .link a:hover {
+            color: #e74c3c;
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            width: 50%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .form-section h2 {
+            text-align: center;
+            color: #27ae60;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+        input[type="submit"] {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background: #d35400;
+        }
+
+        footer {
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery .images img { width: 90%; }
+            ul, .form-section { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Jaipur - The Pink City of India</h1>
+    <p>Experience the royal heritage, colorful bazaars, and architectural wonders of Jaipur, Rajasthan.</p>
+</header>
+
+<section class="gallery">
+    <h2>Beautiful Views of Jaipur</h2>
+    <div class="images">
+        <img src=https://static.vecteezy.com/system/resources/previews/011/084/232/large_2x/full-picture-of-hawa-mahal-of-rajasthan-photo.jpg>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.J5V_nMUYQzP0frwRLPQzugHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Amber Fort">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.Oe01DyU77z_5-0-95O39kAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="City Palace Jaipur">
+    </div>
+</section>
+
+<section>
+    <h2 style="text-align:center;color:#8e44ad;">Top Attractions</h2>
+    <ul>
+        <li>Hawa Mahal (Palace of Winds)</li>
+        <li>Amber Fort & Palace</li>
+        <li>City Palace Jaipur</li>
+        <li>Jantar Mantar Observatory</li>
+    </ul>
+</section>
+
+<section class="video">
+    <h2>Watch This Jaipur Travel Guide</h2>
+    <iframe src="https://www.youtube.com/embed/xq3keWRGiFs" allowfullscreen></iframe>
+
+</section>
+
+<p class="link">
+    <a href="https://www.tourism.rajasthan.gov.in/" target="_blank">Visit Official Rajasthan Tourism Website</a>
+</p>
+
+<section class="form-section">
+    <h2>Share Your Feedback</h2>
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Rate Your Interest:</label>
+        <input type="radio" name="rating">1
+        <input type="radio" name="rating">2
+        <input type="radio" name="rating">3
+        <input type="radio" name="rating">4
+        <input type="radio" name="rating">5
+
+        <label>Activities You’d Like:</label>
+        <input type="checkbox">Sightseeing
+        <input type="checkbox">Shopping
+        <input type="checkbox">Camel Ride
+        <input type="checkbox">Cultural Show
+
+        <label>Comments:</label>
+        <textarea placeholder="Write your comments here..."></textarea>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Explore Jaipur | Designed with ❤️ using HTML5 & CSS3</p>
+</footer>
+
+</body>
+</html>     why the youtube link is not working 
