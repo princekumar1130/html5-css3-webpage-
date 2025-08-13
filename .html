@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Finder & Rating</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: linear-gradient(135deg, #e3f2fd, #f4f4f4);
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    input, select, button {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1976d2;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏫 College Finder & Rating ⭐</h1>
+  <p>Enter your favorite colleges and give them a rating from 1 to 5 stars!</p>
+
+  <form id="collegeForm">
+    <input type="text" id="collegeName" placeholder="Enter college name" required>
+    <select id="collegeRating" required>
+      <option value="">Select Rating</option>
+      <option value="⭐">⭐</option>
+      <option value="⭐⭐">⭐⭐</option>
+      <option value="⭐⭐⭐">⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+    </select>
+    <button type="submit">Add College</button>
+  </form>
+
+  <table id="collegeTable">
+    <thead>
+      <tr>
+        <th>College Name</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Added colleges will appear here -->
+    </tbody>
+  </table>
+
+  <footer>
+    © 2025 College Finder | Made with ❤️ in HTML, CSS & JS
+  </footer>
+
+  <script>
+    const form = document.getElementById('collegeForm');
+    const tableBody = document.querySelector('#collegeTable tbody');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('collegeName').value.trim();
+      const rating = document.getElementById('collegeRating').value;
+
+      if (name && rating) {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${name}</td><td>${rating}</td>`;
+        tableBody.appendChild(row);
+
+        // Reset form
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
